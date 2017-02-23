@@ -7,9 +7,11 @@ using namespace std;
 //double suma(double a[], int n);
 
 //void schimb(int &, int &);
-
+/*
 void schimba(int a[], int n);
 int minim(int a[], int n);
+*/
+int caut(double a[], int n, double valoare);
 
 int main()
 {
@@ -58,10 +60,23 @@ int main()
     valoarea minimă din șirul astfel obținut. Prelucrările se vor
     realiza în două funcții, schimba() și minim().*/
 
+    /*
     int a[] = {12, -14, 7, 23, 5, -71, 4};
     schimba(a, 7); // in sir sunt 7 elemente
     int mini = minim(a, 7);
     cout << "Minimul valorilor dupa schimbarea semnelor este " << mini << endl;
+    return 0;
+    */
+
+    /*Creaţi un program care realizează căutarea unei valori într-un
+     șir de valori de tip double, dat. Căutarea se va realiza în funcția caut().*/
+
+    double a[] = {12., -14., 7., 23., 5., -71., 4.};
+    int rez = caut(a, 7, 23.); // in sir sunt 7 elemente
+    if (rez < 0)
+        cout << "Valoarea lipseste " << endl;
+    else
+        cout << "Valoarea s-a gasit pe pozitia : " << rez << endl;
     return 0;
 
 }
@@ -84,7 +99,7 @@ void schimb(int& x, int& y){
     return;
 }
 */
-
+/*
 void schimba(int a[], int n){
     int i;
     for (i = 0; i < n; i++){
@@ -101,5 +116,12 @@ int minim(int a[], int n){
     }
     return m;
 }
-
-
+*/
+int caut(double a[], int n, double valoare){
+    int i;
+    for(i = 0; i < n; i++){
+        if(a[i] == valoare)
+            return i;
+    }
+    return -1; // Nu s-a gasit
+}
