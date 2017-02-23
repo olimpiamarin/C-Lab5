@@ -4,7 +4,9 @@
 
 using namespace std;
 
-double suma(double a[], int n);
+//double suma(double a[], int n);
+
+void schimb(int &, int &);
 
 int main()
 {
@@ -35,12 +37,20 @@ int main()
     }
     return 0;
     */
-
+    /*
     double x[] = {1., 34., -234., 43., -12};
     cout << "Suma val. din sirul x este : " << suma(x, 5) << endl;
     return 0;
+    */
+
+    int a = 1, b = 7;
+    cout << "La inceput a = " << a << " si b = " << b << endl;
+    schimb(a, b);
+    cout << "Dupa schimb() a = " << a << " si b = " << b << endl;
+    return 0;
 }
 
+/*
 double suma (double a[], int n){
     double s = 0;
     int i;
@@ -48,4 +58,15 @@ double suma (double a[], int n){
         s = s + a[i];
     return s;
 }
+*/
+
+void schimb(int& x, int& y){
+    int aux;
+    aux = x;
+    x = y;
+    y = aux;
+    return;
+}
+
+
 
