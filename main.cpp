@@ -11,7 +11,9 @@ using namespace std;
 void schimba(int a[], int n);
 int minim(int a[], int n);
 */
-int caut(double a[], int n, double valoare);
+//int caut(double a[], int n, double valoare);
+
+void initial(double [], int);
 
 int main()
 {
@@ -70,7 +72,7 @@ int main()
 
     /*Creaţi un program care realizează căutarea unei valori într-un
      șir de valori de tip double, dat. Căutarea se va realiza în funcția caut().*/
-
+    /*
     double a[] = {12., -14., 7., 23., 5., -71., 4.};
     int rez = caut(a, 7, 23.); // in sir sunt 7 elemente
     if (rez < 0)
@@ -78,7 +80,19 @@ int main()
     else
         cout << "Valoarea s-a gasit pe pozitia : " << rez << endl;
     return 0;
+    */
 
+    double a[100];
+    int nr;
+    cout << "Numarul de elemente (mai mic sau egal cu 100): ";
+    cin >> nr;
+    initial(a, nr);
+
+    for(int i = 0; i < nr; i++){
+        cout << a[i] << ", ";
+    }
+    cout << endl;
+    return 0;
 }
 
 /*
@@ -117,6 +131,7 @@ int minim(int a[], int n){
     return m;
 }
 */
+/*
 int caut(double a[], int n, double valoare){
     int i;
     for(i = 0; i < n; i++){
@@ -124,4 +139,11 @@ int caut(double a[], int n, double valoare){
             return i;
     }
     return -1; // Nu s-a gasit
+}
+*/
+
+void initial(double a[], int nr){
+    for(int i = 0; i < nr; i++){
+        a[i] = i + 1;
+    }
 }
